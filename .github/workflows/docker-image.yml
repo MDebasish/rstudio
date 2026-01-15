@@ -22,7 +22,7 @@ jobs:
       uses: mr-smithers-excellent/docker-build-push@v6
       with:
         image: mdebasish/rstudio
-        tags: rstudio_4.4.3, v1
+        tags: 4.4.3
         registry: docker.io
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
