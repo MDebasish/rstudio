@@ -1,0 +1,13 @@
+###########################################################################################################################################################
+# Extending the following:
+# - Rocker RStudio container using new versioned paradigm: https://github.com/rocker-org/rocker-versioned2/blob/master/dockerfiles/rstudio_4.4.3.Dockerfile
+# - license: GPLV2
+###########################################################################################################################################################
+FROM rocker/rstudio:4.4.3
+
+### install key dependencies of certain packages that could be installed later
+RUN apt-get update \
+    && export DEBIAN_FRONTEND=noninteractive \
+    && apt-get -y install --no-install-recommends \
+    libcurl4-openssl-dev libfontconfig1-dev \
+    libfreetype6-dev libicu-dev libx11-dev libxml2-dev
