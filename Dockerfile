@@ -20,5 +20,3 @@ RUN mkdir -p /home/rstudio/project
 
 RUN chown -R rstudio:rstudio /home/rstudio/.cache
 RUN chown -R rstudio:rstudio /home/rstudio/project
-
-USER rstudio
