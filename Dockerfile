@@ -11,3 +11,14 @@ RUN apt-get update \
     && apt-get -y install --no-install-recommends \
     libcurl4-openssl-dev libfontconfig1-dev \
     libfreetype6-dev libicu-dev libx11-dev libxml2-dev
+
+# install R packages renv
+RUN /rocker_scripts/bin/install2.r remotes rstudioapi renv 
+
+RUN mkdir -p /home/rstudio/.cache/R
+RUN mkdir -p /home/rstudio/project
+
+RUN chown -R rstudio:rstudio /home/rstudio/.cache
+RUN chown -R rstudio:rstudio /home/rstudio/project
+
+USER rstudio
