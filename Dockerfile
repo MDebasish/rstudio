@@ -10,7 +10,8 @@ RUN apt-get update \
     && export DEBIAN_FRONTEND=noninteractive \
     && apt-get -y install --no-install-recommends \
     libcurl4-openssl-dev libfontconfig1-dev \
-    libfreetype6-dev libicu-dev libx11-dev libxml2-dev
+    libfreetype6-dev libicu-dev libx11-dev libxml2-dev \
+    libglpk-dev libcairo2-dev
 
 # install R packages renv
 RUN /rocker_scripts/bin/install2.r remotes rstudioapi renv 
