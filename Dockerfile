@@ -12,7 +12,7 @@ RUN apt-get update \
     libcurl4-openssl-dev libfontconfig1-dev \
     libfreetype6-dev libicu-dev libx11-dev libxml2-dev \
     libglpk-dev libcairo2-dev libgit2-dev liblzma-dev \
-    cargo rustc cmake
+    cargo rustc cmake libmagick++-dev
 
 # install R packages renv
 RUN /rocker_scripts/bin/install2.r remotes rstudioapi renv 
