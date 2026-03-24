@@ -12,7 +12,10 @@ RUN apt-get update \
     libcurl4-openssl-dev libfontconfig1-dev \
     libfreetype6-dev libicu-dev libx11-dev libxml2-dev \
     libglpk-dev libcairo2-dev libgit2-dev liblzma-dev \
-    cargo rustc cmake libmagick++-dev curl ca-certificates \
+    cargo rustc cmake libmagick++-dev 
+RUN apt-get update && apt-get install -y \
+    curl \
+    ca-certificates && \
     update-ca-certificates
 
 # install R packages renv
